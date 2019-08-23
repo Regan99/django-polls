@@ -8,7 +8,7 @@ class Question(models.Model):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
     def __str__(self):
         return self.question_text
-    question_text = models.CharField(max_length=200)
+    question_text = models.CharField("The Question",max_length=200)
     pub_date = models.DateTimeField('date published')
     
 
